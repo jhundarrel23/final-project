@@ -24,13 +24,10 @@ class RegisterRequest extends FormRequest
     public function rules()
     {
         return [
-            'email'       => 'required|string|email|max:255|unique:users', // Only require email
-            'username'    => 'required|string|max:255|unique:users',  // If you use username as a required field
-            'password'    => 'required|string|min:6|confirmed',  // Password is still required
-            // Optional fields, remove or adjust as per your need:
-            // 'first_name'  => 'nullable|string|max:255',
-            // 'middle_name' => 'nullable|string|max:255',
-            // 'last_name'   => 'nullable|string|max:255',
+            'email'       => 'required|string|email|max:255|unique:users', 
+            'username'    => 'required|string|max:255|unique:users',  
+            'password'    => 'required|string|min:6|confirmed', 
+           
         ];
     }
 }
